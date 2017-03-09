@@ -52,6 +52,9 @@ module.exports = {
             case Const.keys.esc:
                 this.setState({isVisible: false });
                 break;
+            case Const.keys.tab:
+                this.setState({isVisible: false });
+                break;
         }
     }
 

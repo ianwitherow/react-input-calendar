@@ -28,34 +28,34 @@ module.exports = {
         var _viewHelper = _keyDownViewHelper[this.state.currentView];
         var unit = _viewHelper.unit;
 
-        switch (code) {
-            case Const.keys.left:
-                this.setDate(this.state.date.subtract(1, unit));
-                break;
-            case Const.keys.right:
-                this.setDate(this.state.date.add(1, unit));
-                break;
-            case Const.keys.up:
-                this.setDate(this.state.date.subtract(_viewHelper.upDown, unit));
-                break;
-            case Const.keys.down:
-                this.setDate(this.state.date.add(_viewHelper.upDown, unit));
-                break;
-            case Const.keys.enter:
-                if (_viewHelper.prev)
-                    this.prevView(this.state.date);
+		switch (code) {
+			case Const.keys.left:
+				this.state.isVisible && this.setDate(this.state.date.subtract(1, unit));
+				break;
+			case Const.keys.right:
+				this.state.isVisible && this.setDate(this.state.date.add(1, unit));
+				break;
+			case Const.keys.up:
+				this.state.isVisible && this.setDate(this.state.date.subtract(_viewHelper.upDown, unit));
+				break;
+			case Const.keys.down:
+				this.state.isVisible && this.setDate(this.state.date.add(_viewHelper.upDown, unit));
+				break;
+			case Const.keys.enter:
+				if (_viewHelper.prev)
+					this.prevView(this.state.date);
 
-                if (_viewHelper.exit)
-                    this.setState({isVisible: false});
+				if (_viewHelper.exit)
+					this.setState({isVisible: false});
 
-                break;
-            case Const.keys.esc:
-                this.setState({isVisible: false });
-                break;
-            case Const.keys.tab:
-                this.setState({isVisible: false });
-                break;
-        }
+				break;
+			case Const.keys.esc:
+				this.setState({isVisible: false });
+				break;
+			case Const.keys.tab:
+				this.setState({isVisible: false });
+				break;
+		}
     }
 
 };

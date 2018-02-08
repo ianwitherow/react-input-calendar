@@ -6,10 +6,13 @@
   "main": "index.js",
   "dependencies": {
     "classnames": "^2.2.0",
+    "create-react-class": "^15.6.3",
     "envify": "^3.4.0",
     "moment": "^2.10.6",
     "moment-range": "^2.0.3",
+    "prop-types": "^15.6.0",
     "react": "^15.1.0",
+    "react-create-class": "^1.0.0",
     "reactify": "^1.1.1"
   },
   "devDependencies": {

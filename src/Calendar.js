@@ -1,4 +1,6 @@
 var React = require('react');
+var createClass = require('create-react-class');
+var PropTypes = require('prop-types');
 var cs = require('classnames');
 var moment = require('moment');
 require('moment-range');
@@ -16,23 +18,23 @@ function toDate(date) {
   return new Date(date);
 }
 
-module.exports = React.createClass({
+module.exports = createClass({
 
     propTypes: {
-        closeOnSelect: React.PropTypes.bool,
-        computableFormat: React.PropTypes.string,
-        date: React.PropTypes.any,
-        minDate: React.PropTypes.any,
-        maxDate: React.PropTypes.any,
-        format: React.PropTypes.string,
-        inputFieldId: React.PropTypes.string,
-		  inputFieldClass: React.PropTypes.string,
-        minView: React.PropTypes.number,
-        onBlur: React.PropTypes.func,
-        onChange: React.PropTypes.func,
-        placeholder: React.PropTypes.string,
-        hideTouchKeyboard: React.PropTypes.bool,
-		  hideIcon: React.PropTypes.bool,
+        closeOnSelect: PropTypes.bool,
+        computableFormat: PropTypes.string,
+        date: PropTypes.any,
+        minDate: PropTypes.any,
+        maxDate: PropTypes.any,
+        format: PropTypes.string,
+        inputFieldId: PropTypes.string,
+		  inputFieldClass: PropTypes.string,
+        minView: PropTypes.number,
+        onBlur: PropTypes.func,
+        onChange: PropTypes.func,
+        placeholder: PropTypes.string,
+        hideTouchKeyboard: PropTypes.bool,
+		  hideIcon: PropTypes.bool,
     },
 
     getInitialState: function() {

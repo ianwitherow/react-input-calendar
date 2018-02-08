@@ -1,32 +1,32 @@
 var Const = require('./Constants');
 
 var _keyDownViewHelper = [
-    {
-        prev: false,
-        next: true,
-        exit: true,
-        unit: 'day',
-        upDown: 7
-    },
-    {
-        prev: true,
-        next: true,
-        unit: 'months',
-        upDown: 3
-    },
-    {
-        prev: true,
-        next: false,
-        unit: 'years',
-        upDown: 3
-    }
+	{
+		prev: false,
+		next: true,
+		exit: true,
+		unit: 'day',
+		upDown: 7
+	},
+	{
+		prev: true,
+		next: true,
+		unit: 'months',
+		upDown: 3
+	},
+	{
+		prev: true,
+		next: false,
+		unit: 'years',
+		upDown: 3
+	}
 ];
 
 module.exports = {
 
-    keyDownActions: function (code) {
-        var _viewHelper = _keyDownViewHelper[this.state.currentView];
-        var unit = _viewHelper.unit;
+	keyDownActions: function (code) {
+		var _viewHelper = _keyDownViewHelper[this.state.currentView];
+		var unit = _viewHelper.unit;
 
 		switch (code) {
 			case Const.keys.left:
@@ -56,6 +56,6 @@ module.exports = {
 				this.setState({isVisible: false });
 				break;
 		}
-    }
+	}
 
 };

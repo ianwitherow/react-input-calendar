@@ -1,12 +1,14 @@
 var React = require('react');
+var createClass = require('create-react-class');
+var PropTypes = require('prop-types');
 var moment = require('moment');
 require('moment-range');
 
-module.exports = React.createClass({
+module.exports = createClass({
 
     propTypes: {
-        value: React.PropTypes.string,
-        classes: React.PropTypes.string
+        value: PropTypes.string,
+        classes: PropTypes.string
     },
 
     render: function () {

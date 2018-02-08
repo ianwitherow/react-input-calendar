@@ -1,12 +1,14 @@
 var React = require('react');
+var createClass = require('create-react-class');
+var PropTypes = require('prop-types');
 
-module.exports = React.createClass({
+module.exports = createClass({
 
     propTypes: {
-        next: React.PropTypes.func,
-        prev: React.PropTypes.func,
-        titleAction: React.PropTypes.func,
-        data: React.PropTypes.string
+        next: PropTypes.func,
+        prev: PropTypes.func,
+        titleAction: PropTypes.func,
+        data: PropTypes.string
     },
 
     render: function () {

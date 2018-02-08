@@ -1,16 +1,18 @@
 var React = require('react');
+var PropTypes = require('prop-types');
+var createClass = require('create-react-class');
 var cs = require('classnames');
 var moment = require('moment');
 require('moment-range');
 var Cell = require('./Cell');
 var ViewHeader = require('./ViewHeader');
 
-module.exports = React.createClass({displayName: "exports",
+module.exports = createClass({
 
     propTypes: {
-        date: React.PropTypes.object.isRequired,
-        minDate: React.PropTypes.any,
-        maxDate: React.PropTypes.any
+        date: PropTypes.object.isRequired,
+        minDate: PropTypes.any,
+        maxDate: PropTypes.any
     },
 
     checkIfMonthDisabled: function (month) {

@@ -1,18 +1,20 @@
 var React = require('react');
+var PropTypes = require('prop-types');
+var createClass = require('create-react-class');
 var cs = require('classnames');
 var moment = require('moment');
 require('moment-range');
 var Cell = require('./Cell');
 var ViewHeader = require('./ViewHeader');
 
-module.exports = React.createClass({
+module.exports = createClass({
 
     propTypes: {
-        date: React.PropTypes.object.isRequired,
-        minDate: React.PropTypes.any,
-        maxDate: React.PropTypes.any,
-        setDate: React.PropTypes.func,
-        nextView: React.PropTypes.func
+        date: PropTypes.object.isRequired,
+        minDate: PropTypes.any,
+        maxDate: PropTypes.any,
+        setDate: PropTypes.func,
+        nextView: PropTypes.func
     },
 
     getDaysTitles: function () {

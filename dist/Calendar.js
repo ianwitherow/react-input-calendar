@@ -330,6 +330,7 @@ module.exports = createClass({
                     onFocus: this.props.openOnInputFocus ? this.toggleClick : '', 
                     onKeyDown: this.props.onKeyDown || '', 
                     placeholder: this.props.placeholder, 
+                    name: this.props.name, 
                     readOnly: readOnly}), 
 
 						  calendarIcon, 

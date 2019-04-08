@@ -35,6 +35,7 @@ module.exports = createClass({
         placeholder: PropTypes.string,
         hideTouchKeyboard: PropTypes.bool,
 		  hideIcon: PropTypes.bool,
+		  autoComplete: PropTypes.string,
     },
 
     getInitialState: function() {
@@ -331,6 +332,7 @@ module.exports = createClass({
                     onKeyDown: this.props.onKeyDown, 
                     placeholder: this.props.placeholder, 
                     name: this.props.name, 
+                    autoComplete: this.props.autoComplete, 
                     readOnly: readOnly}), 
 
 						  calendarIcon, 
